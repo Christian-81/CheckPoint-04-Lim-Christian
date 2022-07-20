@@ -13,6 +13,10 @@ const router = express.Router();
 // NE PAS OUBLIER D'AJOUTER LA CONST EN LIGNE 3
 router.get("/products", ProductController.browse);
 router.get("/products/:id", ProductController.read);
+router.put("/products/:id", ProductController.edit);
+router.post("/products", ProductController.add);
+router.delete("/products/:id", ProductController.delete);
+
 
 
 module.exports = router;
