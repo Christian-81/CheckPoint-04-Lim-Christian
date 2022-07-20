@@ -1,14 +1,14 @@
 -- Structure de la table `Category`
 
 
-CREATE TABLE `hang_meas`.`Category` (
+CREATE TABLE `hang_meas`.`category` (
     `id` INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     `label` VARCHAR(150) NOT NULL
 );
 
 
-LOCK TABLES `hang_meas`.`Category` WRITE;
-INSERT INTO `hang_meas`.`Category` (`label`) VALUES
+LOCK TABLES `hang_meas`.`category` WRITE;
+INSERT INTO `hang_meas`.`category` (`label`) VALUES
 ('starter'),
 ('main_course'),
 ('dessert'),
@@ -19,7 +19,7 @@ UNLOCK TABLES;
 -- Structure de la table `Product`
 
 
-CREATE TABLE `hang_meas`.`Product` (
+CREATE TABLE `hang_meas`.`product` (
     id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(150) NOT NULL,
     price INT NOT NULL,
@@ -31,8 +31,8 @@ CREATE TABLE `hang_meas`.`Product` (
 ) ENGINE=InnoDB;
 
 
-LOCK TABLES `hang_meas`.`Product` WRITE;
-INSERT INTO `hang_meas`.`Product` (`title`, `price`, `img`, `alt`, `description`, `category_id`) VALUES
+LOCK TABLES `hang_meas`.`product` WRITE;
+INSERT INTO `hang_meas`.`product` (`title`, `price`, `img`, `alt`, `description`, `category_id`) VALUES
 ('Soupe Pho', '12', '', 'Soupe Pho', 'Classé 20eme dans la liste de 50 meilleurs plats du monde établie en 2017 par CNN, le pho vietnamien est de nouveau chaleureusement salué par les gourmets nationaux et internationaux. Qu’il soit pho au bœuf ou pho au poulet, deux versions classiques, cette soupe savoureuse et parfumée prend une place particulaire dans le cœur des conviés. Figurant parmi 12 meilleurs plats au monde d’après le magazine Huffington Post et présent fois dans les médias étrangers, le pho mérite amplement vedette du patrimoine culinaire vietnamien.', 2),
 ('Rouleau de printemps', '8', '', 'Rouleau de printemps', 'le rouleau de printemps, également appelé rouleau d’été, occupe quant à lui, une digne place dans le top de 50 meilleurs plats du monde, selon CNN.', 1),
 ('Vermicelles de riz au porc grillé', '13.90', '', 'Vermicelles de riz au porc grillé', 'Ce met affriolant a été inscrit dans le top de 10 meilleures plats de rue publié en 2014 par le magazine National Geographic. L’an précédant, le bun cha a fait un place dans le classement de 25 plats d’été les plus appétissants au monde établi par CNN.', 2),
@@ -68,7 +68,7 @@ UNLOCK TABLES;
 -- Structure de la table `Menu_of_the_day`
 
 
-CREATE TABLE `hang_meas`.`Menu_of_the_day` (
+CREATE TABLE `hang_meas`.`menu_of_the_day` (
     id INT PRIMARY KEY AUTO_INCREMENT,
     label VARCHAR(150) NOT NULL,
     price_menu INT NOT NULL,
@@ -83,7 +83,7 @@ CREATE TABLE `hang_meas`.`Menu_of_the_day` (
 ) ENGINE=InnoDB;
 
 
-LOCK TABLES `hang_meas`.`Menu_of_the_day` WRITE;
-INSERT INTO `hang_meas`.`Menu_of_the_day` (`label`, `price_menu`, `starter_id`, `main_course_id`, `dessert_id`, `drink_id`) VALUES
+LOCK TABLES `hang_meas`.`menu_of_the_day` WRITE;
+INSERT INTO `hang_meas`.`menu_of_the_day` (`label`, `price_menu`, `starter_id`, `main_course_id`, `dessert_id`, `drink_id`) VALUES
 ('Menu du jour', 19, 10, 1, 17, 25);
 UNLOCK TABLES;
