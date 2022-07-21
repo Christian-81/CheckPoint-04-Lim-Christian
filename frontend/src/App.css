@@ -9,3 +9,11 @@
     background-size: cover;
     min-height: 150vh;
 }
+
+.background-menu {
+    background-image: url("./assets/temples-angkor.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 150vh;
+}
