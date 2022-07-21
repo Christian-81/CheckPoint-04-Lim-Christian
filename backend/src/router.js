@@ -25,9 +25,4 @@ router.put("/menu/:id", MenuController.edit);
 router.post("/menu", MenuController.add);
 router.delete("/menu/:id", MenuController.delete);
 
-
-
-
-
-
 module.exports = router;

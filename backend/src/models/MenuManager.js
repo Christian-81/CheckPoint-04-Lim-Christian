@@ -4,11 +4,21 @@ class MenuManager extends AbstractManager {
   static table = "menu_of_the_day";
 
   get() {
-    return this.connection.query(`SELECT * FROM ${MenuManager.table}`);
+    return this.connection.query(`
+      SELECT m.label, m.price_menu, p.title AS start_title, p2.title AS main_course, p3.title AS dessert 
+      FROM ${MenuManager.table} AS m 
+      INNER JOIN product AS p ON p.id = m.starter_id 
+      INNER JOIN product AS p2 ON p2.id = m.main_course_id 
+      INNER JOIN product AS p3 ON p3.id = m.dessert_id 
+      `);
   }
 
+  // get() {
+  //   return this.connection.query(`SELECT * FROM ${MenuManager.table}`);
+  // }
+
   getOne(id) {
-    return this.connection.query(`select * from  ${this.table} where id = ?`,
+    return this.connection.query(`SELECT * FROM  ${this.table} where id = ?`,
     [id]);
   }
 
