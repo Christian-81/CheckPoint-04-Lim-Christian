@@ -18,7 +18,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<ListingCarte />} />
-          <Route path="/carte/:id" element={<CarteDetail />} />
+          <Route path="/products/:id" element={<CarteDetail />} />
           <Route path="/menu-du-jour/" element={<MenuDuJour />} />
           <Route path="/equipe/" element={<Equipe />} />
         </Routes>
