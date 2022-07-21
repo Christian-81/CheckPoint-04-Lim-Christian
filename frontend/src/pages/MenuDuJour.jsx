@@ -1,9 +1,11 @@
 import React from 'react'
 
-const MenuDuJour = () => {
+function MenuDuJour() {
   return (
-    <div>Menu-Du-Jour</div>
-  )
+    <div className='bg-yellow-100'>
+      <h1 className='bg-red-500'>NOTRE CARTE</h1>
+    </div>
+  );
 }
 
-export default MenuDuJour
+export default MenuDuJour;

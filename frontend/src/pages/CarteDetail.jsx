@@ -1,9 +1,11 @@
 import React from 'react'
 
-const CarteDetail = () => {
+function CarteDetail() {
   return (
-    <div>CarteDetail</div>
-  )
+    <div className='bg-yellow-100'>
+      <h1 className='bg-red-500'>NOTRE CARTE</h1>
+    </div>
+  );
 }
 
-export default CarteDetail
+export default CarteDetail;
