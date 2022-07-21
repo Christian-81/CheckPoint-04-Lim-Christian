@@ -1,6 +1,8 @@
 const express = require("express");
 
 const { ProductController } = require("./controllers");
+const { MenuController } = require("./controllers");
+
 
 const router = express.Router();
 
@@ -16,6 +18,15 @@ router.get("/products/:id", ProductController.read);
 router.put("/products/:id", ProductController.edit);
 router.post("/products", ProductController.add);
 router.delete("/products/:id", ProductController.delete);
+
+router.get("/menu", MenuController.browse);
+router.get("/menu/:id", MenuController.read);
+router.put("/menu/:id", MenuController.edit);
+router.post("/menu", MenuController.add);
+router.delete("/menu/:id", MenuController.delete);
+
+
+
 
 
 
