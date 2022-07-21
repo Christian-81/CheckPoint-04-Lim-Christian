@@ -7,6 +7,7 @@ import MenuDuJour from "./pages/MenuDuJour";
 import Equipe from "./pages/Equipe";
 
 import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
 
 import "./App.css";
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/menu-du-jour/" element={<MenuDuJour />} />
           <Route path="/equipe/" element={<Equipe />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
