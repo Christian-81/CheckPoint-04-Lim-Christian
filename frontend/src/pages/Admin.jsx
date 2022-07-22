@@ -29,7 +29,7 @@ function Admin() {
   };
 
   return (
-    <div className="bg-gray-300 flex flex-col justify-center text-center p-6">
+    <div className="bg-gray-100 flex flex-col justify-center text-center p-6">
       <h1 className="font-logo bg-orange py-1 text-2xl font-bold">
         BACK OFFICE HANG MEAS
       </h1>
