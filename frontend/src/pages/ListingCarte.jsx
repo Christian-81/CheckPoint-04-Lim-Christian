@@ -89,13 +89,13 @@ function Carte() {
             ))}
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-between px-10">
         <Link to={`/menu-du-jour`}>
           <button
             type="button"
             className="flex justify-center text-white py-2 px-6 bg-orange focus:outline-none font-medium rounded-lg text-sm lg:text-base items-center mb-6 mt-2 mx-auto"
           >
-            <p className="text-center">Voir le menu du jour</p>
+            <p className="text-center">Voir menu du jour</p>
             <svg
               className="w-0 h-0 ml-0 md:visible md:w-4 md:h-4 md:ml-2 -mr-1"
               fill="currentColor"
@@ -110,6 +110,27 @@ function Carte() {
             </svg>
           </button>
         </Link>
+        <Link to={`/createproduct`}>
+          <button
+            type="button"
+            className="flex justify-center text-white py-2 px-6 bg-gris focus:outline-none font-medium rounded-lg text-sm lg:text-base items-center mb-6 mt-2 mx-auto"
+          >
+            <p className="text-center">Ajouter produit</p>
+            <svg
+              className="w-0 h-0 ml-0 md:visible md:w-4 md:h-4 md:ml-2 -mr-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fillRule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+        </Link>
+
       </div>
 
     </div>
