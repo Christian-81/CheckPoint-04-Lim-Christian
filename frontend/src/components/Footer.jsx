@@ -20,7 +20,7 @@ const Footer = () => {
               <img
                 src={facebook}
                 alt="logo Facebook"
-                className="w-[100%]"
+                className="w-[100%] md:w-[70%]"
               />
             </a>
           </li>
@@ -33,7 +33,7 @@ const Footer = () => {
               <img
                 src={instagram}
                 alt="logo Instagram"
-                className="w-[100%]"
+                className="w-[100%] md:w-[70%]"
               />
             </a>
           </li>
