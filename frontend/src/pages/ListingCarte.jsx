@@ -97,7 +97,7 @@ function Carte() {
           >
             <p className="text-center">Voir menu du jour</p>
             <svg
-              className="w-0 h-0 ml-0 md:visible md:w-4 md:h-4 md:ml-2 -mr-1"
+              className="invisible w-0 h-0 ml-0 md:ml-2 -mr-1"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +117,7 @@ function Carte() {
           >
             <p className="text-center">Ajouter produit</p>
             <svg
-              className="w-0 h-0 ml-0 md:visible md:w-4 md:h-4 md:ml-2 -mr-1"
+              className="invisible w-0 h-0 ml-0 md:ml-2 -mr-1"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
