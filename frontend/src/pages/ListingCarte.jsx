@@ -21,76 +21,65 @@ function Carte() {
     <div className="background">
       <div className="flex justify-center">
         <div className="w-[85%] py-3">
-          {/* // Starters Maped */}
           <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos entrées</h2>
 
           {products
             .filter((product) => product.category_id === 1)
-            .map((product, index) => (
+            .map((product) => (
               <OneProductRow
                 title={product.title}
                 id={product.id}
                 price={product.price}
                 description={product.description}
-                key={index}
                 category={product.category_id}
               />
             ))}
-
-          {/* // Main_course Maped */}
 
           <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos plats</h2>
 
           {products
             .filter((product) => product.category_id === 2)
-            .map((product, index) => (
+            .map((product) => (
               <OneProductRow
                 title={product.title}
                 id={product.id}
                 price={product.price}
                 description={product.description}
-                key={index}
                 category={product.category_id}
               />
             ))}
-
-          {/* // Dessert Maped */}
 
           <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos desserts</h2>
 
           {products
             .filter((product) => product.category_id === 3)
-            .map((product, index) => (
+            .map((product) => (
               <OneProductRow
                 title={product.title}
                 id={product.id}
                 price={product.price}
                 description={product.description}
-                key={index}
                 category={product.category_id}
               />
             ))}
-
-          {/* // Drinkss Maped */}
 
           <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos boissons</h2>
 
           {products
             .filter((product) => product.category_id === 4)
-            .map((product, index) => (
+            .map((product) => (
               <OneProductRow
                 title={product.title}
                 id={product.id}
                 price={product.price}
                 description={product.description}
-                key={index}
                 category={product.category_id}
               />
             ))}
         </div>
       </div>
       <div className="flex justify-between px-10">
-        <Link to={`/menu-du-jour`}>
+        <Link to="/menu-du-jour">
           <button
             type="button"
             className="flex justify-center text-white py-2 px-6 bg-orange focus:outline-none font-medium rounded-lg text-sm lg:text-base items-center mb-6 mt-2 mx-auto"
@@ -110,7 +99,7 @@ function Carte() {
             </svg>
           </button>
         </Link>
-        <Link to={`/createproduct`}>
+        <Link to="/createproduct">
           <button
             type="button"
             className="flex justify-center text-white py-2 px-6 bg-gris focus:outline-none font-medium rounded-lg text-sm lg:text-base items-center mb-6 mt-2 mx-auto"
@@ -130,9 +119,7 @@ function Carte() {
             </svg>
           </button>
         </Link>
-
       </div>
-
     </div>
   );
 }

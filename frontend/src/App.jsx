@@ -1,15 +1,13 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import Navbar from "@components/Navbar";
+import Footer from "@components/Footer";
 import ListingCarte from "./pages/ListingCarte";
 import CarteDetail from "./pages/CarteDetail";
 import MenuDuJour from "./pages/MenuDuJour";
 import Equipe from "./pages/Equipe";
 import Admin from "./pages/Admin";
-
-
-import Navbar from "@components/Navbar";
-import Footer from "@components/Footer";
 
 import "./App.css";
 
