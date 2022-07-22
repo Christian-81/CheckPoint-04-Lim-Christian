@@ -4,9 +4,11 @@ import axios from "axios";
 
 import OneProductOfMenuRow from "../components/OneProductOfMenuRow";
 
+import "../App.css";
+
 function MenuDuJour() {
   const [productsOfMenu, setProductsOfMenu] = useState([]);
-
+console.log(productsOfMenu);
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/menu/`)
@@ -18,13 +20,13 @@ function MenuDuJour() {
     <div className="bg-purple-200">
       {productsOfMenu.map((productOfMenu, index) => (
         <OneProductOfMenuRow
-          label={productOfMenu.label}
-          id={productOfMenu.id}
-          price_menu={productOfMenu.price_menu}
-          starter_id={productOfMenu.starter_id}
-          main_course_id={productOfMenu.main_course_id}
-          dessert_id={productOfMenu.dessert_id}
+          productOfMenu={productOfMenu}
           key={index}
+          // id={productOfMenu.id}
+          // price_menu={productOfMenu.price_menu}
+          // starter_id={productOfMenu.starter_title}
+          // main_course_id={productOfMenu.main_course}
+          // dessert_id={productOfMenu.dessert}
         />
       ))}
     </div>
