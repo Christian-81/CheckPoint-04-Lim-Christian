@@ -76,8 +76,6 @@ class MenuController {
         res.sendStatus(500);
       });
   };
-
-
 }
 
 module.exports = MenuController;

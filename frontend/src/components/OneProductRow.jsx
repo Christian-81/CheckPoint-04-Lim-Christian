@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
-const OneProductRow = ({ title, price, id }) => {
+function OneProductRow({ title, price, id }) {
   return (
     <div className="mb-1 font-body text-xs">
       <Link to={`/products/${id}`}>
@@ -11,9 +11,8 @@ const OneProductRow = ({ title, price, id }) => {
           <p className="mr-3">{price} €</p>
         </div>
       </Link>
-      {/* <p className="text-[.6rem]">{description}</p> */}
     </div>
   );
-};
+}
 
 export default OneProductRow;

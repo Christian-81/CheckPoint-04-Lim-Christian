@@ -8,8 +8,9 @@ class ProductManager extends AbstractManager {
   }
 
   getOne(id) {
-    return this.connection.query(`select * from  ${this.table} where id = ?`,
-    [id]);
+    return this.connection.query(`select * from  ${this.table} where id = ?`, [
+      id,
+    ]);
   }
 
   update(product) {
@@ -22,7 +23,14 @@ class ProductManager extends AbstractManager {
   insert(product) {
     return this.connection.query(
       `insert into ${ProductManager.table} (title, price, img, alt, description, category_id) values (?, ?, ?, ?, ?, ?)`,
-      [product.title, product.price, product.img, product.alt, product.description, product.category_id]
+      [
+        product.title,
+        product.price,
+        product.img,
+        product.alt,
+        product.description,
+        product.category_id,
+      ]
     );
   }
 
@@ -31,7 +39,6 @@ class ProductManager extends AbstractManager {
       id,
     ]);
   }
-
 }
 
 module.exports = ProductManager;

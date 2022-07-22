@@ -18,8 +18,9 @@ class MenuManager extends AbstractManager {
   // }
 
   getOne(id) {
-    return this.connection.query(`SELECT * FROM  ${this.table} where id = ?`,
-    [id]);
+    return this.connection.query(`SELECT * FROM  ${this.table} where id = ?`, [
+      id,
+    ]);
   }
 
   update(menu_of_the_day) {
@@ -32,7 +33,14 @@ class MenuManager extends AbstractManager {
   insert(menu_of_the_day) {
     return this.connection.query(
       `insert into ${MenuManager.table} (label, price_menu, starter_id, main_course_id, dessert_id, drink_id) values (?, ?, ?, ?, ?, ?)`,
-      [menu_of_the_day.label, menu_of_the_day.price_menu, menu_of_the_day.starter_id, menu_of_the_day.main_course_id, menu_of_the_day.dessert_id, menu_of_the_day.drink_id]
+      [
+        menu_of_the_day.label,
+        menu_of_the_day.price_menu,
+        menu_of_the_day.starter_id,
+        menu_of_the_day.main_course_id,
+        menu_of_the_day.dessert_id,
+        menu_of_the_day.drink_id,
+      ]
     );
   }
 
@@ -41,7 +49,6 @@ class MenuManager extends AbstractManager {
       id,
     ]);
   }
-
 }
 
 module.exports = MenuManager;

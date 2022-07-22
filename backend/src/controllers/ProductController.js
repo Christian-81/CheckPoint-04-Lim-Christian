@@ -76,8 +76,6 @@ class ProductController {
         res.sendStatus(500);
       });
   };
-
-
 }
 
 module.exports = ProductController;

@@ -10,6 +10,8 @@
   },
   "rules": {
     "no-console": "off",
+    "react/prop-types": 0,
+    "camelcase": "off",
     "no-restricted-syntax": [
       "error",
       {

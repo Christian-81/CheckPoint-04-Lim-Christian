@@ -3,13 +3,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "blanc": "#ffffff",
+        blanc: "#ffffff",
         "blanc-casse": "#f6f6f6",
-        "orange": "#DAAB3A",
+        orange: "#DAAB3A",
         "marron-claire": "#915416",
         "marron-fonce": "#74300b",
-        "gris": "#6f6f6f",
-        "noir": "#0c0c0c",
+        gris: "#6f6f6f",
+        noir: "#0c0c0c",
       },
       fontFamily: {
         logo: ["Palanquin Dark", "sans-serif"],

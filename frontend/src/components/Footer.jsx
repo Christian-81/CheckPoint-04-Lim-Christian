@@ -3,7 +3,7 @@ import React from "react";
 import facebook from "@assets/facebook.png";
 import instagram from "@assets/instagram.png";
 
-const Footer = () => {
+function Footer() {
   return (
     <div className="flex justify-between items-center bg-black px-8 py-2">
       <div className="font-logo text-orange font-normal">
@@ -41,6 +41,6 @@ const Footer = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Footer;
