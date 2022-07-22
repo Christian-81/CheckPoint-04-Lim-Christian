@@ -17,7 +17,7 @@ router.get("/products", ProductController.browse);
 router.get("/products/:id", ProductController.read);
 router.put("/products/:id", ProductController.edit);
 router.post("/createproduct", ProductController.add);
-router.delete("/products/:id", ProductController.delete);
+router.delete("/deleteproduct/:id", ProductController.delete);
 
 router.get("/menu", MenuController.browse);
 router.get("/menu/:id", MenuController.read);

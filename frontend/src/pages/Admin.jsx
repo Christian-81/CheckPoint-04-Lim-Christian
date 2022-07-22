@@ -24,7 +24,8 @@ function Admin() {
         category_id: product.category_id,
       })
       .then((res) => setProduct(res.data))
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err))
+      .finally((window.location.href = "/"));
   };
 
   return (
