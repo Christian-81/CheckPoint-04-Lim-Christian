@@ -9,20 +9,42 @@ import "../App.css";
 
 function Carte() {
   const [products, setProducts] = useState([]);
+  const [counterStarter, setCounterStarter] = useState(null);
+  const [counterMainCourse, setCounterMainCourse] = useState(null);
+  const [counterDessert, setCounterDessert] = useState(null);
+  const [counterDrink, setCounterDrink] = useState(null);
 
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_BACKEND_URL}/products/`)
       .then((res) => setProducts(res.data))
       .catch((err) => console.error(err));
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/counterstarter/`)
+      .then((res) => setCounterStarter(res.data))
+      .catch((err) => console.error(err));
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/countermaincourse/`)
+      .then((res) => setCounterMainCourse(res.data))
+      .catch((err) => console.error(err));
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/counterdessert/`)
+      .then((res) => setCounterDessert(res.data))
+      .catch((err) => console.error(err));
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}/counterdrink/`)
+      .then((res) => setCounterDrink(res.data))
+      .catch((err) => console.error(err));
   }, []);
+
 
   return (
     <div className="background">
       <div className="flex justify-center">
         <div className="w-[85%] py-3">
-          <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos entrées</h2>
-
+          <div>
+            <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos {counterStarter} entrées</h2>
+          </div>
           {products
             .filter((product) => product.category_id === 1)
             .map((product) => (
@@ -33,9 +55,10 @@ function Carte() {
                 description={product.description}
                 category={product.category_id}
               />
-            ))}
+            ))
+          }
 
-          <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos plats</h2>
+          <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos {counterMainCourse} plats</h2>
 
           {products
             .filter((product) => product.category_id === 2)
@@ -49,7 +72,7 @@ function Carte() {
               />
             ))}
 
-          <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos desserts</h2>
+          <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos {counterDessert} desserts</h2>
 
           {products
             .filter((product) => product.category_id === 3)
@@ -63,7 +86,7 @@ function Carte() {
               />
             ))}
 
-          <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos boissons</h2>
+          <h2 className="bg-orange pl-2 my-4 py-1 font-bold">Nos {counterDrink} boissons</h2>
 
           {products
             .filter((product) => product.category_id === 4)

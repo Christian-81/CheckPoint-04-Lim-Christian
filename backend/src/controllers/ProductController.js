@@ -1,6 +1,48 @@
 const models = require("../models");
 
 class ProductController {
+
+  static counterstarter = async (req, res) => {
+    models.product
+      try {
+        const counterStarter = await models.product.counterStarter(req.query);
+        res.status(200).json(counterStarter);
+      } catch {
+          res.status(500).send("erreur");
+      }
+  };
+
+  static countermaincourse = async (req, res) => {
+    models.product
+      try {
+        const counterMainCourse = await models.product.counterMainCourse(req.query);
+        res.status(200).json(counterMainCourse);
+      } catch {
+          res.status(500).send("erreur");
+      }
+  };
+
+  static counterdessert = async (req, res) => {
+    models.product
+      try {
+        const counterDessert = await models.product.counterDessert(req.query);
+        res.status(200).json(counterDessert);
+      } catch {
+          res.status(500).send("erreur");
+      }
+  };
+
+  static counterdrink = async (req, res) => {
+    models.product
+      try {
+        const counterDrink = await models.product.counterDrink(req.query);
+        res.status(200).json(counterDrink);
+      } catch {
+          res.status(500).send("erreur");
+      }
+  };
+
+
   static browse = (req, res) => {
     models.product
       .get()
