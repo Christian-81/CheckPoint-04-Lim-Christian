@@ -3,6 +3,7 @@ const express = require("express");
 const { ProductController } = require("./controllers");
 const { MenuController } = require("./controllers");
 
+
 const router = express.Router();
 
 // router.get("/items", ItemController.browse);
@@ -14,6 +15,12 @@ const router = express.Router();
 // NE PAS OUBLIER D'AJOUTER LA CONST EN LIGNE 3
 router.get("/products", ProductController.browse);
 router.get("/products/:id", ProductController.read);
+router.get("/counterstarter", ProductController.counterstarter);
+router.get("/countermaincourse", ProductController.countermaincourse);
+router.get("/counterdessert", ProductController.counterdessert);
+router.get("/counterdrink", ProductController.counterdrink);
+
+
 router.put("/products/:id", ProductController.edit);
 router.post("/createproduct", ProductController.add);
 router.delete("/deleteproduct/:id", ProductController.delete);
