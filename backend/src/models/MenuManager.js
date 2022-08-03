@@ -5,13 +5,23 @@ class MenuManager extends AbstractManager {
 
   get() {
     return this.connection.query(`
-      SELECT m.label, m.price_menu, p.title AS start_title, p2.title AS main_course, p3.title AS dessert 
+      SELECT 
+      m.label, 
+      m.price_menu, 
+      p.title AS start_title, 
+      p.img AS start_img, 
+      p2.title AS main_course_title, 
+      p2.img AS main_course_img, 
+      p3.title AS dessert_title, 
+      p3.img AS dessert_img 
       FROM ${MenuManager.table} AS m 
       INNER JOIN product AS p ON p.id = m.starter_id 
       INNER JOIN product AS p2 ON p2.id = m.main_course_id 
       INNER JOIN product AS p3 ON p3.id = m.dessert_id 
       `);
   }
+
+
 
   // get() {
   //   return this.connection.query(`SELECT * FROM ${MenuManager.table}`);
