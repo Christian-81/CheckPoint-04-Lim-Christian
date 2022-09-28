@@ -36,7 +36,7 @@ function OneProductOfMenuRow({ productOfMenu }) {
               </p>
             </div>
           </div>
-          {/* CAROUSSEL */}
+          {/* CAROUSEL */}
           <div className="w-[95%] mx-auto rounded-2xl h-56 sm:h-64 xl:h-80 2xl:h-96">
             <Carousel slideInterval={5000}>
               <img
@@ -53,7 +53,7 @@ function OneProductOfMenuRow({ productOfMenu }) {
               />
             </Carousel>
           </div>
-          {/* FIN CAROUSSEL */}
+          {/* FIN CAROUSEL */}
         </div>
       </div>
     </div>

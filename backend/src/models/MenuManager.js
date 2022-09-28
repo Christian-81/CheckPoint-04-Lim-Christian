@@ -21,12 +21,6 @@ class MenuManager extends AbstractManager {
       `);
   }
 
-
-
-  // get() {
-  //   return this.connection.query(`SELECT * FROM ${MenuManager.table}`);
-  // }
-
   getOne(id) {
     return this.connection.query(`SELECT * FROM  ${this.table} where id = ?`, [
       id,
